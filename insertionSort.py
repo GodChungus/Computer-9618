@@ -18,4 +18,3 @@ arr = [random.randint(1, 1000) for _ in range(50)]
 start = time.perf_counter()
 print(insertionSort(arr))
 end = time.perf_counter()
-print(end - start)

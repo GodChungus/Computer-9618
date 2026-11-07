@@ -12,11 +12,3 @@ def directed_matrix(V, E):
         u, v = edge
         matrix[u][v] = 1
     return matrix
-
-
-# Testing git
-V = 6
-E = [[0, 1], [1, 2], [1, 3], [3, 4], [3, 5]]
-for row in undirected_matrix(V, E):
-    print(row)
-print()

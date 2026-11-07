@@ -12,4 +12,3 @@ arr = [random.randint(1, 100) for _ in range(50)]
 start = time.perf_counter()
 print(linearSearch(arr, random.randint(1, 100)))
 end = time.perf_counter()
-print(end - start)
