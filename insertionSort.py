@@ -15,8 +15,9 @@ def insertionSort(array):
     return array
 
 
-#Testing Git
-arr = [random.randint(1, 1000) for _ in range(50)]
+arr = [random.randint(1, 1000) for _ in range(20)]
 start = time.perf_counter()
-print(insertionSort(arr))
+print(f'Unsorted array: {arr}')
+print(f'Sorted array: {insertionSort(arr)}')
 end = time.perf_counter()
+print(f'Time taken: {end-start} seconds.')
