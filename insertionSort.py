@@ -1,7 +1,7 @@
 import time
 import random
 
-def insertionSort(array):
+def insertion_sort(array):
     for i in range(1, len(array)):
         key = array[i]
         j = i-1
@@ -15,9 +15,10 @@ def insertionSort(array):
     return array
 
 
-arr = [random.randint(1, 1000) for _ in range(20)]
-start = time.perf_counter()
-print(f'Unsorted array: {arr}')
-print(f'Sorted array: {insertionSort(arr)}')
-end = time.perf_counter()
-print(f'Time taken: {end-start} seconds.')
+if __name__ == '__main__':
+    arr = [random.randint(1, 1000) for _ in range(20)]
+    start = time.perf_counter()
+    print(f'Unsorted array: {arr}')
+    print(f'Sorted array: {insertion_sort(arr)}')
+    end = time.perf_counter()
+    print(f'Time taken: {end - start} seconds.')
