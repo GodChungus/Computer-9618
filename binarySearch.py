@@ -1,6 +1,16 @@
-from insertionSort import insertion_sort
 import time
 import random
+
+
+def insertion_sort(arr):
+    for i in range(1, len(arr)):
+        key = arr[i]
+        j = i-1;
+        while j>=0 and key < arr[j]:
+            arr[j+1] = arr[j]
+            j-=1
+        arr[j+1] = key
+    return arr
 
 
 def binary_search(arr, x):
@@ -17,6 +27,7 @@ def binary_search(arr, x):
 
 
 array = insertion_sort([random.randint(1, 100) for _ in range(20)])
+print(f'The sorted array is {array}.')
 value = int(input("Enter the value you want to search for: "))
 start = time.perf_counter()
 if binary_search(array, value):
